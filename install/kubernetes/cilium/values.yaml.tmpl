@@ -1925,6 +1925,10 @@ egressGateway:
   reconciliationTriggerInterval: 1s
   # -- Maximum number of entries in egress gateway policy map
   # maxPolicyEntries: 16384
+  # -- Number of the top-k SNAT map connections to track in Cilium statedb.
+  NATMAPStatsEntries: 32
+  # -- Interval between how often SNAT map is counted for stats.
+  NATMAPStatsInterval: 30s
 vtep:
   # -- Enables VXLAN Tunnel Endpoint (VTEP) Integration (beta) to allow
   # Cilium-managed pods to talk to third party VTEP devices over Cilium tunnel.
